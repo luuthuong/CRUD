@@ -1,0 +1,14 @@
+.formcustom{
+    z-index: 10;
+    transform: translateX(50%);
+    /* visibility: hidden; */
+}
+/* .formcustom.active{
+    transform:scale(1);
+    transform: translateX(50%);
+    visibility: visible;
+} */
+.text-field-custom{
+    color:red;
+    display: none;
+}

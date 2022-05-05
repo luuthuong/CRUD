@@ -1,13 +1,76 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import './css/variable.css';
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+body{
+  background-color: var(--main-color);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App-header{
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+.container{
+  position:relative;
+  width: 768px;
+  height: 640px;
+  overflow-y: auto;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  background:#35485a;
+  display: flex;
+justify-content: center;
+flex-direction: column;
+}
+.container >*~*{
+  margin-top: 10px;
+}
+
+.element{
+display: flex;
+justify-content: center;
+cursor:pointer;
+}
+.element:hover{
+  background-color: #4a5e6e;
+}
+.container .container-content{
+  height: 600px;
+  overflow-y: auto;
+}
+.container .container-content>*~*{
+  margin-top: 10px;
+}
+.element .element-content{
+  margin-left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 250px;
+  color:#fff;
+  line-height: 2;
+}
+.element .btn-group{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+}
+.element .btn-group>*:hover{
+color: var(--primary-color);
+}
+.container.activeblur{
+  filter: blur(5px);
+  pointer-events: none;
 }
